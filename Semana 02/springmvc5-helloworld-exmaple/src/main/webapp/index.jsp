@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Bienvenido a MAVEN con Apache Tomcat</h2>
 </body>
 </html>
