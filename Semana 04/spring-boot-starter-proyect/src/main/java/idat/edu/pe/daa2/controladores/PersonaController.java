@@ -6,14 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/facturas")
-public class FacturaController {
+@RequestMapping("/personas")
+public class PersonaController {
 
-	//localhost:8085/facturas/inicio
-	
-	 @GetMapping("/inicio")
-		public String greeting (Model model) {
-			model.addAttribute("nombreModulo", "EMISION DE FACTURAS");
-			return "resultado";
-		}
+	@GetMapping("/inicio")
+	public String  greeting(Model model) {
+		model.addAttribute("nombreModulo", "REGISTRO DE ALUMNOS");
+		return "resultado";
+
+	}
 }

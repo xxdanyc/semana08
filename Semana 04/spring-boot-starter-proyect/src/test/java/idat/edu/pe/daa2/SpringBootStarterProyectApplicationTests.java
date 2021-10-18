@@ -1,10 +1,10 @@
-package idat.edu.pe.daa;
+package idat.edu.pe.daa2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringMvcApplicationTests {
+class SpringBootStarterProyectApplicationTests {
 
 	@Test
 	void contextLoads() {
