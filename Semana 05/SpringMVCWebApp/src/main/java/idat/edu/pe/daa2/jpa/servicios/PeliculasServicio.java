@@ -38,10 +38,7 @@ public class PeliculasServicio {
 		peliculaActual.setGenero(peliculaActualizar.getGenero());
 		peliculaActual.setFormato(peliculaActualizar.getFormato());
 		peliculaActual.setSinopsis(peliculaActualizar.getSinopsis());
-		
-		
-		
-		
+
 		Pelicula peliculaActualizado = repositorio.save(peliculaActual);
 		return peliculaActualizado;
 	}
