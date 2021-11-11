@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package idat.edu.pe.daa2.jpa.modelo;
 
 import java.io.Serializable;
@@ -23,7 +28,10 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 
-
+/**
+ *
+ * @author man
+ */
 @Entity
 @Table(name = "sala")
 @XmlRootElement
@@ -44,7 +52,7 @@ public class Sala implements Serializable {
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "capacidad")
-    private Integer capacidad;
+    private Integer capacidad; 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "sala",fetch=FetchType.LAZY)
     @JsonBackReference(value="sala_func")
     private List<Funciones> funcionesList;
@@ -131,4 +139,3 @@ public class Sala implements Serializable {
     }
     
 }
-

@@ -26,13 +26,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/peliculas/guardar").hasAnyRole("ADMIN","CREADOR","EDITOR")
 		.antMatchers("/peliculas/actualizar/**").hasAnyRole("ADMIN","EDITOR")
 		.antMatchers("/peliculas/eliminar/**").hasAnyRole("ADMIN","DEPURADOR")
+		
+	
 		.anyRequest().authenticated()
 		.and().formLogin().loginPage("/login").defaultSuccessUrl("/bienvenida", true).permitAll()
 		.and().logout()
 		.permitAll();
 
 	}
-	
+
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -44,5 +46,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.withUser("ernesto").password(encoder.encode("ernesto")).roles("EDITOR","LECTOR").and();
 
 	}
-		
+
 }

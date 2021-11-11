@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name = "pelicula")
 @XmlRootElement
@@ -57,6 +59,7 @@ public class Pelicula implements Serializable{
 	 @Column(name = "sinopsis")
 	 private String sinopsis;
 	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "pelicula",fetch=FetchType.LAZY)
+	 @JsonBackReference(value="pelicual_fun")
 	 private List<Funciones> funcionesList;
 	 
 	 public Pelicula() {
